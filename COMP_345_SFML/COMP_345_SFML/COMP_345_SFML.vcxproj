@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5A0A21F4-0C4C-4969-841E-87814F107FAB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>COMP_345_SFML</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\SFML\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-audio-d.lib;sfml-graphics-d.lib;sfml-network-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\SFML\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-audio.lib;sfml-graphics.lib;sfml-network.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Critter.cpp" />
+    <ClCompile Include="CritterFactory.cpp" />
+    <ClCompile Include="CritterHPBarDisplay.cpp" />
+    <ClCompile Include="DeathTower.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="FastCritter.cpp" />
+    <ClCompile Include="FireTower.cpp" />
+    <ClCompile Include="GameConstants.cpp" />
+    <ClCompile Include="LevelUpTower.cpp" />
+    <ClCompile Include="ThunderTower.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="NearestCritterTowerStrategy.cpp" />
+    <ClCompile Include="NormalCritter.cpp" />
+    <ClCompile Include="NormalTower.cpp" />
+    <ClCompile Include="Observable.cpp" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="Scenery.cpp" />
+    <ClCompile Include="SlowCritter.cpp" />
+    <ClCompile Include="Target.cpp" />
+    <ClCompile Include="Tower.cpp" />
+    <ClCompile Include="DecoratedTower.cpp" />
+    <ClCompile Include="Wave.cpp" />
+    <ClCompile Include="WeakestCritterStrategy.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Critter.h" />
+    <ClInclude Include="CritterFactory.h" />
+    <ClInclude Include="CritterHPBarDisplay.h" />
+    <ClInclude Include="DeathTower.h" />
+    <ClInclude Include="dirent.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="FastCritter.h" />
+    <ClInclude Include="FireTower.h" />
+    <ClInclude Include="GameConstants.h" />
+    <ClInclude Include="LevelUpTower.h" />
+    <ClInclude Include="ThunderTower.h" />
+    <ClInclude Include="NearestCritterTowerStrategy.h" />
+    <ClInclude Include="NormalCritter.h" />
+    <ClInclude Include="NormalTower.h" />
+    <ClInclude Include="Observable.h" />
+    <ClInclude Include="Observer.h" />
+    <ClInclude Include="Path.h" />
+    <ClInclude Include="Scenery.h" />
+    <ClInclude Include="SlowCritter.h" />
+    <ClInclude Include="Strategy.h" />
+    <ClInclude Include="Target.h" />
+    <ClInclude Include="Tower.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="DecoratedTower.h" />
+    <ClInclude Include="Wave.h" />
+    <ClInclude Include="WeakestCritterStrategy.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\img\critter.png" />
+    <Image Include="res\img\death_tower.png" />
+    <Image Include="res\img\end_sample.png" />
+    <Image Include="res\img\fire_tower.png" />
+    <Image Include="res\img\normal_tower.png" />
+    <Image Include="res\img\path_sample.png" />
+    <Image Include="res\img\scenery_sample.png" />
+    <Image Include="res\img\start_sample.png" />
+    <Image Include="res\img\thunder_tower.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
